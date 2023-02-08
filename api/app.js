@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/api/auth", authRoutes);
 app.use("/api/", homeRoutes);
-app.use("/api/", reservationRoutes);
+app.use("/api/reservations", reservationRoutes);
 
 app.listen(8800, () => {
     console.log("Api is working");
