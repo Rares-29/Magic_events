@@ -6,6 +6,7 @@ const Reservation = () => {
 
     const handleChange = async(e) => {
         console.log(e.target.value);
+        setCode(e.target.value);
     }
     const deleteReservation = async(e) => {
         e.preventDefault();
@@ -27,6 +28,7 @@ const Reservation = () => {
         <form>
             <input onChange = {handleChange}  type = "number"></input>
             <button onClick = {deleteReservation} name = "button" type = "submit">Delete your reservation</button>
+            {res ? <p>{JSON.stringify(res)}</p> : <p></p>}
         </form>
         </div>
     )
